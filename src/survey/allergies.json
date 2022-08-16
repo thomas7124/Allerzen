@@ -1,0 +1,134 @@
+{
+  "allergies": {
+    "pollen": {"symptoms": ["sneezing", "nasal congestion", "sinus pressure", "runny nose", "itchy and/or watery eyes",
+                        "sore throat", "coughing", "swollen eyes", "loss of taste and/or smell"],
+               "seasons": ["February", "March", "April", "May", "June"],
+               "environmental_factors": {
+                 "live": ["country", "suburb"],
+                 "home": ["house", "apartment"],
+                 "home_age": "5-10",
+                 "pets": false,
+                 "smoke": false,
+                 "vegetation": ["Yes (A Lot)", "Yes (Some)"]
+               },
+               "medical_history":  ["asthma"],
+               "family_history": {
+                 "allergies": ["pollen", "Oral Allergy Syndrome", "hay fever"],
+                 "medical_conditions": ["asthma"]
+               }},
+    "mold": {  "symptoms": ["sneezing", "coughing", "nasal congestion", "itchy and/or watery eyes", "postnasal drip",
+                      "chest tightness", "symptoms of asthma and/or hay fever"],
+               "seasons": ["July", "August", "September", "October", "November"],
+               "environmental_factors": {
+                 "live": ["country", "city", "suburb"],
+                 "home": ["house", "apartment"],
+                 "home_age": "5-10",
+                 "pets": false,
+                 "smoke": false,
+                 "vegetation": []
+               },
+               "medical_history":  ["Oral Allergy Syndrome"],
+               "family_history": {
+                 "allergies": ["mold"],
+                 "medical_conditions": ["Oral Allergy Syndrome"]
+               }},
+    "dust": {  "symptoms": ["sneezing", "runny nose", "nasal congestion", "sinus pressure", "itchy and/or watery eyes",
+                      "itchy nose and/or throat", "postnasal drip", "coughing", "shortness of breath",
+                      "symptoms of asthma and/or hay fever"],
+               "seasons": ["may", "june", "july", "august", "september", "october"],
+               "environmental_factors": {
+                 "live": ["country", "city", "suburb"],
+                 "home": ["house", "apartment"],
+                 "home_age": "16-30",
+                 "pets": true,
+                 "smoke": false,
+                 "vegetation": []
+               },
+               "medical_history":  ["asthma", "Oral Allergy Syndrome"],
+               "family_history": {
+                 "allergies": ["dust"],
+                 "medical_conditions": ["asthma", "Oral Allergy Syndrome"]
+               }},
+    "latex": { "symptoms": ["chest tightness", "skin rashes", "runny nose", "throat and/or mouth swelling",
+                       "itchy and/or watery eyes", "sneezing", "shortness of breath"],
+               "seasons": [],
+               "environmental_factors": {
+                 "live": [],
+                 "home": [],
+                 "home_age": "5-10",
+                 "pets": false,
+                 "smoke": false,
+                 "vegetation": []
+               },
+               "medical_history":  ["eczema"],
+               "family_history": {
+                 "allergies": ["latex"],
+                 "medical_conditions": ["eczema"]
+               }},
+    "insects": { "symptoms": ["pain", "redness", "swelling", "flushing", "skin rashes", "itching", "anaphylaxis",
+                         "throat and/or mouth swelling", "fainting", "blurry vision", "temporary hearing loss"],
+              "seasons": ["april", "may", "june", "july", "august"],
+               "environmental_factors": {
+                 "live": ["country"],
+                 "home": ["house"],
+                 "home_age": "5-10",
+                 "pets": false,
+                 "smoke": false,
+                 "vegetation": ["Yes (A Lot)", "Yes (Some)"]
+               },
+               "medical_history":  [],
+               "family_history": {
+                 "allergies": ["insects"],
+                 "medical_conditions": []
+               }},
+    "pets": { "symptoms": ["sneezing", "runny nose", "sinus pressure", "itchy and/or watery eyes", "skin rashes",
+                      "chest tightness", "shortness of breath", "nose and/or throat swelling", "anaphylaxis"],
+              "seasons": [],
+               "environmental_factors": {
+                 "live": ["country", "city", "suburb"],
+                 "home": ["house", "apartment"],
+                 "home_age": "5-10",
+                 "pets": true,
+                 "smoke": false,
+                 "vegetation": []
+               },
+               "medical_history":  ["asthma"],
+               "family_history": {
+                 "allergies": ["pets"],
+                 "medical_conditions": ["asthma"]
+               }},
+    "medication": { "symptoms": ["wheezing", "shortness of breath", "throat and/or mouth swelling",
+                            "nausea", "diarrhea", "fainting", "anaphylaxis"],
+                    "seasons": [],
+                     "environmental_factors": {
+                       "live": [],
+                       "home": [],
+                       "home_age": "5-10",
+                       "pets": false,
+                       "smoke": false,
+                       "vegetation": []
+                     },
+                     "medical_history":  [],
+                     "family_history": {
+                       "allergies": ["medication"],
+                       "medical_conditions": []
+                     }},
+    "food": { "symptoms": ["skin rashes", "runny nose", "nausea", "diarrhea", "itchy mouth and/or lips",
+                      "throat and/or mouth swelling", "breathing difficulties", "itchy and/or watery eyes",
+                      "lightheadedness", "anaphylaxis"],
+              "seasons": [],
+               "environmental_factors": {
+                 "live": [],
+                 "home": [],
+                 "home_age": "5-10",
+                 "pets": false,
+                 "smoke": false,
+                 "vegetation": []
+               },
+               "medical_history":  ["lactose intolerance", "celiac disease"],
+               "family_history": {
+                 "allergies": ["food"],
+                 "medical_conditions": ["lactose intolerance", "celiac disease"]
+               }}
+  }
+}

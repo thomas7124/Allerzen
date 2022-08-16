@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+{% load static %}
+{% load survey_tags %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel = "stylesheet" href = "{% static 'css/home.css' %}">
+    <title>Allerzen</title>
+</head>
+<body>
+    <h1>Welcome to Allerzen site</h1>
+
+    <h1 id="result" style="color: red">{{ result }}</h1>
+
+
+
+
+    <form action ="." method = "POST">
+        {% csrf_token %}
+
+        <section id="general-info">
+            <h3>General Information</h3>
+            <label for="first_name">First Name: </label>
+            <input type="text" id = "first_name" name = "first_name">
+            <label for ="last_name">Last Name: </label>
+            <input type = "text" id = "last_name"  name = "last_name">
+            <label for ="age">Age: </label>
+            <input type = "text" id = "age"  name = "age">
+
+        </section>
+
+        <hr>
+
+        <section id="symptoms">
+            <h3>Symptoms</h3>
+            <table>
+                {% for row in symptoms_matrix %}
+                    <tr>
+                        {% for symp in row %}
+                            <td>
+                                <input type="checkbox" id={{symp}} name=symptoms value={{symp}}>
+                                <label for={{symp}}>{{ symp | remove_ }}</label>
+                            </td>
+                        {% endfor %}
+                    </tr>
+                {% endfor %}
+            </table>
+
+        </section>
+
+
+<!--        Season -->
+        <section class="season">
+            <h3>Season</h3>
+
+            <table>
+                {% for row in seasons %}
+                    <tr>
+                        {% for season in row %}
+                            <td>
+                                <input type="checkbox" id={{season}} name="seasons" value={{season}}>
+                                <label for="{{season}}">{{ season }}</label>
+                            </td>
+                        {% endfor %}
+                    </tr>
+                {% endfor %}
+            </table>
+        </section>
+
+        <section>
+            <h3>Environmental factors</h3>
+            <h4>Where do you live?</h4>
+            <select name="place" id="place">
+                <option>Country</option>
+                <option>City</option>
+                <option>Suburb</option>=
+            </select>
+            <h4>Do you live in an apartment or house?</h4>
+            <select name="home" id="home">
+                <option>Apartment</option>
+                <option>House</option>
+            </select>
+            <h4>What is the age of your home?</h4>
+            <select name="homeAge" id="homeAge">
+                <option>I don't know</option>
+                <option>0-5</option>
+                <option>6-15</option>
+                <option>16-30</option>
+                <option>31-50</option>
+                <option>50-100</option>
+                <option>100+</option>
+            </select>
+
+            <h4>Do you live with any pets with fur?</h4>
+            <select name="pets" id="pet">
+                <option>Yes</option>
+                <option>No</option>
+            </select>
+            <h4>Do you live with any people who smoke?</h4>
+            <select name="smoke" id="smoke">
+                <option>Yes</option>
+                <option>No</option>
+            </select>
+            <h4>Is there a lot of vegetation (flowers, plants, trees) around your home?</h4>
+            <select name="veg" id="veg">
+                <option>Yes (A lot)</option>
+                <option>Yes (Some)</option>
+                <option>No</option>
+            </select>
+        </section>
+
+        <section>
+            <h3>Medical History</h3>
+            <h4>Have you had or currently have any of the following conditions?</h4>
+            <table>
+                {% for row in medical_conditions %}
+                    <tr>
+                        {% for cond in row %}
+                            <td>
+                                <input type="checkbox" id={{cond}} name="medical_conditions" value={{cond}}>
+                                <label for="{{cond}}">{{ cond }}</label>
+                            </td>
+                        {% endfor %}
+                    </tr>
+                {% endfor %}
+            </table>
+        </section>
+
+
+        <section>
+            <h3>Family History</h3>
+                {% for allergy in allergies %}
+
+                        <input type="checkbox" id={{allergy}} name="allergy" value={{allergy}}>
+                        <label for="{{allergy}}">{{ allergy }}</label>
+
+                {% endfor %}
+
+            <h4>Do you have any family members with the following medical conditions?</h4>
+            <table>
+                {% for row in medical_conditions %}
+                    <tr>
+                        {% for cond in row %}
+                            <td>
+                                <input type="checkbox" id={{cond2}} name="medical_conditions" value={{cond}}>
+                                <label for="{{cond2}}">{{ cond }}</label>
+                            </td>
+                        {% endfor %}
+                    </tr>
+                {% endfor %}
+            </table>
+
+        </section>
+
+        <section>
+            <input type = "submit">
+        </section>
+
+
+    </form>
+
+
+</body>
+
+
+</html>
